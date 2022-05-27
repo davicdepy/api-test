@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+# Application
+
+  postgres:
+    image: postgres:12.0
+    restart: always
+    environment:
+      - POSTGRES_USER=edge
+      - POSTGRES_PASSWORD=edge
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+volumes:
+  postgres:
