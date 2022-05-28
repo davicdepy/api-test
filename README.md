@@ -16,5 +16,6 @@ API-TEST
 ## Documentation
 **/api-docs/**
 
-## Collection
-**api-test.json** *(import in insomnia or postman)*
+## Collection and Entity Design
+- `api-test.json` *(import in insomnia or postman)*
+- `entity-design` *(https://whimsical.com/test-MAunNcCMr8AyBqH7vGycSo)*
