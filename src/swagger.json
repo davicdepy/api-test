@@ -1,0 +1,285 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "api-test Documentation",
+    "description": "This is an API REST TEST",
+    "version": "1.0.0",
+    "contact": {
+      "email": "davidcdepy@gmail.com"
+    }
+  },
+  "paths": {
+    "/client/": {
+      "post": {
+        "tags": ["Create Client"],
+        "summary": "Create Client",
+        "description": "The client is create through this route",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                },
+                "example": {
+                  "name": "name",
+                  "password": "password"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Client already exists"
+          }
+        }
+      }
+    },
+    "/deliveryman/": {
+      "post": {
+        "tags": ["Create Deliveryman"],
+        "summary": "Create deliveryman",
+        "description": "The deliveryman is create through this route",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                },
+                "example": {
+                  "name": "name",
+                  "password": "password"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Deliveryman already exists"
+          }
+        }
+      }
+    },
+    "/client/authenticate": {
+      "post": {
+        "tags": ["Authentication"],
+        "summary": "Client authentication",
+        "description": "The client is authenticated through this route",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                },
+                "example": {
+                  "name": "authenticated name sample",
+                  "password": "authenticated password sample"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Username or password invalid!"
+          }
+        }
+      }
+    },
+    "/deliveryman/authenticate": {
+      "post": {
+        "tags": ["Authentication"],
+        "summary": "Deliveryman authentication",
+        "description": "The deliveryman is authenticated through this route",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                },
+                "example": {
+                  "name": "authenticated name sample",
+                  "password": "authenticated password sample"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Username or password invalid!"
+          }
+        }
+      }
+    },
+    "/clients": {
+      "get": {
+        "tags": ["Clients"],
+        "summary": "List all Clients",
+        "description": "List all Clients",
+         "responses": {
+           "200": {
+             "description": "Success",
+             "content": {
+               "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "username": {
+                      "type": "string"
+                    }
+                  },
+                  "example": {
+                    "id":"0d2637c2-c3e8-492c-9088-f28e8076da64",
+                    "username": "davidgomez"
+                  }
+                }
+               }
+             }
+           }
+         }
+      }
+    },
+    "/deliveryman": {
+      "get": {
+        "tags": ["Deliveryman"],
+        "summary": "List all deliveryman",
+        "description": "List all deliveryman",
+         "responses": {
+           "200": {
+             "description": "Success",
+             "content": {
+               "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "username": {
+                      "type": "string"
+                    }
+                  },
+                  "example": {
+                    "id":"0d2637c2-c3e8-492c-9088-f28e8076da64",
+                    "username": "davidgomez"
+                  }
+                }
+               }
+             }
+           }
+         }
+      }
+    },
+    "/client/:id": {
+      "delete": {
+        "tags": ["Delete Client"],
+        "summary": "Delete customer for your ID",
+        "description": "Delete customer for your ID",
+         "responses": {
+           "200": {
+             "description": "Success",
+             "content": {
+               "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "username": {
+                      "type": "string"
+                    }
+                  },
+                  "example": {
+                    "params":"/client/20dd69e5-b951-4608-9f3d-1d89403ab2b7"
+                  }
+                }
+               }
+             }
+           }
+         }
+      }
+    },
+    "/deliveryman/:id": {
+      "delete": {
+        "tags": ["Delete Deliveryman"],
+        "summary": "Delete deliveryman for your ID",
+        "description": "Delete deliveryman for your ID",
+         "responses": {
+           "200": {
+             "description": "Success",
+             "content": {
+              "application/json": {
+               "schema": {
+                 "type": "object",
+                 "properties": {
+                   "id": {
+                     "type": "string"
+                   },
+                   "username": {
+                     "type": "string"
+                   }
+                 },
+                 "example": {
+                   "params":"/deliveryman/170a807c-59f9-4170-924a-7091254712c9"
+                 }
+               }
+              }
+            }
+           }
+         }
+      }
+    }
+  }
+}
