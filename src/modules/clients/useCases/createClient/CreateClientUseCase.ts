@@ -19,7 +19,7 @@ export class CreateClientUseCase {
             }
         })
 
-        if (clientExist) {
+        if (clientExist && !clientExist) {
             throw new Error("Client already exists")
         }
 

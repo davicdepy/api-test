@@ -17,7 +17,7 @@ export class CreateDeliverymanUseCase {
       },
     });
 
-    if (deliverymanExist) {
+    if (deliverymanExist && !deliverymanExist) {
       throw new Error("Deliveryman already exists");
     }
 

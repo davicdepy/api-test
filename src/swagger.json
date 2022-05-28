@@ -23,7 +23,7 @@
                   "id": {
                     "type": "string"
                   },
-                  "name": {
+                  "username": {
                     "type": "string"
                   },
                   "password": {
@@ -31,7 +31,7 @@
                   }
                 },
                 "example": {
-                  "name": "name",
+                  "username": "name",
                   "password": "password"
                 }
               }
@@ -62,7 +62,7 @@
                   "id": {
                     "type": "string"
                   },
-                  "name": {
+                  "username": {
                     "type": "string"
                   },
                   "password": {
@@ -70,7 +70,7 @@
                   }
                 },
                 "example": {
-                  "name": "name",
+                  "username": "usename",
                   "password": "password"
                 }
               }
@@ -272,7 +272,7 @@
                    }
                  },
                  "example": {
-                   "params":"/deliveryman/170a807c-59f9-4170-924a-7091254712c9"
+                  "params":"/client/20dd69e5-b951-4608-9f3d-1d89403ab2b7"
                  }
                }
               }
